@@ -15,7 +15,7 @@ const initialFilm = {
   species: []
 };
 
-const FilmDetails = props => {
+export default function FilmDetails(props) {
   const [film, setFilm] = useState({
     loading: true,
     data: initialFilm,
@@ -47,15 +47,6 @@ const FilmDetails = props => {
         producer,
         characters
       } = filmDetails;
-
-      // const charactersPromises = characters.map(c => axios.get(c));
-      // const charactersArr = await Promise.all(charactersPromises)
-      //   .then(({ data }) => {
-      //     return data;
-      //   })
-      //   .catch(err => {
-      //     console.log('error resolving characters');
-      //   });
 
       setFilm(prevState => ({
         ...prevState,
@@ -92,6 +83,4 @@ const FilmDetails = props => {
     </div>
   );
 };
-
-export default FilmDetails;
 

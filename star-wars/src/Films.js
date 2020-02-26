@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const Films = () => {
+// export default function PurchaseOrderList(props) 
+
+export default function Films(props) {
   const [films, setFilms] = useState({
     loading: true,
     data: [],
@@ -49,6 +51,4 @@ const Films = () => {
     </div>
   );
 };
-
-export default Films;
 
